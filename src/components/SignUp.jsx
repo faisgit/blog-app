@@ -56,9 +56,9 @@ function SignUp() {
                 placeholder = "Enter your Name"
                 type = "Text"
                 label ="Name"
-                {...register('name'),{
+                {...register('name',{
                     required: true 
-                }}
+                })}
                 />
                 <Input
               label="Email"
@@ -77,9 +77,9 @@ function SignUp() {
             label = "passoword"
             type = "password"
             placeholder = "Enter Your Passoword"
-            {...register('password'), {
+            {...register('password', {
               required : true
-            }}
+            })}
             />
             <Button
             type="submit"

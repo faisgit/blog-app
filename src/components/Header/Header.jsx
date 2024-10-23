@@ -18,7 +18,7 @@ function Header() {
     },
     {
       name : "SignUp",
-      path : "/signup",
+      path : "/sign-up",
       active : !authstatus
     },
     {

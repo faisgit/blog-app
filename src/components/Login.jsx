@@ -43,7 +43,7 @@ function Login() {
         <p className="mt-2 text-center text-base text-black/60">
           Don&apos;t have any account?&nbsp;
           <Link
-            to="/signup"
+            to="/sign-up"
             className="font-medium text-primary transition-all duration-200 hover:underline"
           >
             Sign Up
@@ -62,16 +62,16 @@ function Login() {
                   matchPatern: (value) =>
                     /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                     "Email address must be a valid address",
-                },
+                }
               })}
             />
             <Input
             label = "passoword"
             type = "password"
             placeholder = "Enter Your Passoword"
-            {...register('password'), {
+            {...register('password', {
               required : true
-            }}
+            })}
             />
             <Button
             type="submit"

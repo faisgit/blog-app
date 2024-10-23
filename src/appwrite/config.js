@@ -1,4 +1,4 @@
-import { Client, Databases, ID, Query } from "appwrite"
+import { Client, Databases, ID, Query, Storage } from "appwrite"
 import conf from "../conf/conf"
 
 export class Service{
@@ -125,5 +125,5 @@ export class Service{
 
 }
 
-const service = new Service()
-export default service
+const appwriteService = new Service()
+export default appwriteService

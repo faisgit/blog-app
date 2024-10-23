@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
-import conf from "./conf/conf";
 import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
-import {Header, Footer} from './components/index'
+import { Header, Footer } from "./components/index";
+import { Outlet } from "react-router-dom";
 function App() {
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   useEffect(() => {
-    authService
-      .getCurrentUser()
+    authService.getCurrentUser()
       .then((userData) => {
         if (userData) {
           dispatch(login({ userData }));
@@ -21,9 +20,10 @@ function App() {
   }, []);
   return !loading ? (
     <div className="bg-black/80">
-      
       <Header />
-      <h1>Home Page</h1>
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   ) : (

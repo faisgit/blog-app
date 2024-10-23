@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react'
 function Button({
     children,
     type = "button",
-    bgColor =  "bg-blie-600",
+    bgColor =  "bg-blue-600",
     textColor = "text-white",
     className =  "",
     ...props
